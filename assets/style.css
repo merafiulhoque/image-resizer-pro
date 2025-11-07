@@ -484,3 +484,18 @@ footer {
     padding: 2rem;
   }
 }
+
+/* ensure upload section always visible */
+#upload-section {
+  display: flex !important;
+  justify-content: center;
+  align-items: center;
+  opacity: 1 !important;
+  visibility: visible !important;
+  z-index: 20 !important;
+}
+
+/* make sure ad blocks never overlap upload box */
+.ad-block {
+  z-index: 5 !important;
+}
