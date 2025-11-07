@@ -22,6 +22,8 @@ body {
   background-attachment: fixed;
   background-size: cover;
   overflow-x: hidden;
+   will-change: transform;
+  transform: translateZ(0);
 }
 
 /* === Navbar === */
@@ -183,6 +185,15 @@ body {
   margin-top: 100px; /* creates space for fixed navbar */
   margin-bottom: 25px;
 }
+
+body {
+  min-height: 100vh;
+}
+
+.main-centered {
+  min-height: calc(100vh - 200px); /* ensures enough space for ads/navbar */
+}
+
 
 /* Bottom ad slightly separated */
 .ad-block.horizontal:last-of-type {
