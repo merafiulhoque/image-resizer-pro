@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Free online Image Resizer and Compressor to resize, reduce, and compress images instantly. Works with JPG, PNG, and WebP.">
+  <meta name="keywords" content="image resizer, photo resizer, image reducer, image size reducer, compress image online, photo size reducer, image resize online">
+  <meta property="og:title" content="Free Online Image Resizer & Compressor | ImageResizer Pro">
+  <meta property="og:description" content="Resize, compress, and optimize your images online for free. Works with JPG, PNG, and WebP.">
+  <meta property="og:image" content="https://imageresizerpro.in/assets/og-image.jpg">
+  <meta property="og:url" content="https://imageresizerpro.in">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="canonical" href="https://imageresizerpro.in/" />
+  <link rel="icon" type="image/jpg" href="./assets/favicon.jpg" />
+  <link rel="stylesheet" href="./assets/style.min.css" />
+  <title>Free Online Image Resizer & Compressor | ImageResizer Pro</title>
+</head>
+
+<body>
+  <!-- Header -->
+  <header>
+    <nav class="navbar">
+      <div class="logo">🖼️ ImageResizer Pro</div>
+      <ul class="nav-links">
+        <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="image-compressor.html">Compressor</a></li>
+        <li><a href="resize-guide.html">Resize Guide</a></li>
+      </ul>
+    </nav> 
+  </header>
+
+  <!-- Top Ad Block -->
+  <div class="ad-block horizontal">
+    Advertisement [728×90 Top Banner]
+  </div>
+
+  <!-- Bottom Ad Block -->
+  <div class="ad-block horizontal">
+    Advertisement [728×90 Bottom Banner]
+  </div>
+
+  <!-- Main Section -->
+  <main class="main-centered">
+    <div class="ad-row">
+      <!-- Left Vertical Ad -->
+      <div class="ad-block vertical">Advertisement [160×600]</div>
+
+      <!-- Main Upload Tool -->
+      <section id="upload-section" class="upload-section centered">
+        <div class="upload-area" id="uploadArea">
+          <div class="upload-icon">📁</div>
+          <p class="upload-text">Drag & drop your image here</p>
+          <p>or</p>
+          <input type="file" id="imageInput" accept="image/*" hidden />
+          <button class="btn" id="browseBtn" style="margin-top: 1rem;">Browse Files</button>
+        </div>
+
+        <div class="formats-info">
+          <p><strong>Supported formats:</strong> JPG, PNG, WebP, GIF</p>
+          <p><strong>Max file size:</strong> 10MB</p>
+        </div>
+      </section>
+
+      <!-- Right Vertical Ad -->
+      <div class="ad-block vertical">Advertisement [160×600]</div>
+    </div>
+
+    <!-- Modal Popup (Tool Editor) -->
+    <div id="editorModal" class="modal-overlay">
+      <div class="modal-content">
+        <span class="close-btn" id="closeModal">&times;</span>
+        <div class="modal-body">
+          <!-- Controls -->
+          <div class="controls-section">
+            <h2>Resize & Compress</h2>
+
+            <div class="control-row">
+              <div class="control-group">
+                <label for="resizeWidth">Width (px)</label>
+                <input type="number" id="resizeWidth" placeholder="Auto" />
+              </div>
+              <div class="control-group">
+                <label for="resizeHeight">Height (px)</label>
+                <input type="number" id="resizeHeight" placeholder="Auto" />
+              </div>
+            </div>
+
+            <div class="control-group">
+              <label for="resizePercentage">Scale (%)</label>
+              <input type="number" id="resizePercentage" placeholder="100" min="1" max="200" value="100" />
+            </div>
+
+            <div class="control-group">
+              <label for="quality">Quality: <span id="qualityValue">80</span>%</label>
+              <input type="range" id="quality" min="1" max="100" value="80" />
+            </div>
+
+            <div class="control-group">
+              <label for="format">Output Format</label>
+              <select id="format" class="btn" style="width: 100%; padding: 1rem;">
+                <option value="jpg">JPG</option>
+                <option value="jpeg">JPEG</option>
+                <option value="png">PNG</option>
+                <option value="webp">WebP</option>
+              </select>
+            </div>
+
+            <div class="control-group">
+              <label for="targetSize">🎯 Target File Size (KB)</label>
+              <div class="control-row">
+                <input type="number" id="targetSize" placeholder="e.g., 500" min="10"
+                  style="width: 70%; padding: 0.8rem; border-radius: 8px; border: 1px solid #ddd;" />
+                <button class="btn btn-secondary" id="autoPredictBtn"
+                  style="width: 30%; padding: 0.8rem; margin-left: 0.5rem;">Auto Predict</button>
+              </div>
+              <small style="color:#777;">Enter target size or let AI find optimal compression.</small>
+            </div>
+
+            <button class="btn" id="resizeButton" style="width: 100%; margin-top: 1rem;">Resize & Compress</button>
+          </div>
+
+          <!-- Preview -->
+          <div class="preview-section">
+            <h2>Preview</h2>
+            <div class="preview-container">
+              <div class="preview-box">
+                <h3>Original</h3>
+                <img id="originalPreview" class="preview-img" src="" alt="Original" style="display: none;" />
+                <div id="originalInfo" class="image-info"></div>
+              </div>
+              <div class="preview-box">
+                <h3>Resized</h3>
+                <img id="resizedPreview" class="preview-img" src="" alt="Resized" style="display: none;" />
+                <div id="resizedInfo" class="image-info"></div>
+                <a href="#" id="downloadBtn" class="btn btn-secondary"
+                  style="margin-top: 1rem; display: none;">Download</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- About Section -->
+  <section class="about-section" style="max-width:900px;margin:60px auto 40px;text-align:center;color:#fff;">
+    <h2>About ImageResizer Pro</h2>
+    <p>ImageResizer Pro is a free online tool to resize, compress, and reduce image size instantly without losing quality.</p>
+  </section>
+
+
+
+  <!-- Footer -->
+  <footer style="text-align:center;padding:2rem 0;color:#fff;">
+    <p>&copy; 2025 ImageResizer Pro | <a href="resize-guide.html" style="color:#ffd6ff;">Resize Guide</a> | <a href="image-compressor.html" style="color:#ffd6ff;">Compressor</a></p>
+  </footer>
+
+  <script src="./assets/script.js" defer></script>
+
+</body>
+</html>
