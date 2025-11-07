@@ -1,1 +1,466 @@
-.main-centered,.navbar{width:100%;display:flex}.navbar,.upload-section{backdrop-filter:blur(12px)}*,.ad-row{box-sizing:border-box}.modal-overlay,.navbar{position:fixed;top:0;left:0}.btn,.close-btn,.upload-area{cursor:pointer}.navbar,footer{background:rgba(0,0,0,.25)}.ad-block,.preview-section,.upload-section,footer{text-align:center}*{margin:0;padding:0;font-family:Poppins,sans-serif}body{min-height:100vh;max-height:fit-content;display:flex;flex-direction:column;justify-content:center;align-items:center;background:linear-gradient(135deg,#667eea 0,#764ba2 50%,#ff6ec4 100%);color:#fff;background-attachment:fixed;background-size:cover;overflow-x:hidden}.navbar{justify-content:space-between;align-items:center;padding:1rem 2rem;z-index:1000}.logo{font-weight:700;font-size:1.3rem}.nav-links{list-style:none;display:flex;gap:1.5rem}.nav-links a{color:#fff;text-decoration:none;font-weight:500;transition:color .3s}.footer-links a:hover,.nav-links a:hover{color:#ffd6ff}.main-centered{flex:1;justify-content:center;align-items:center;min-height:calc(100vh - 80px);padding-top:20px}.upload-section{background:rgba(255,255,255,.15);border-radius:20px;padding:3rem 2.5rem;box-shadow:0 8px 25px rgba(0,0,0,.2);animation:.6s forwards fadeUp;width:90%;max-width:480px}.upload-area{border:2px dashed rgba(255,255,255,.6);border-radius:16px;padding:3rem 2rem;background:rgba(255,255,255,.1);color:#fff;transition:.3s}.upload-area.active,.upload-area:hover{background:rgba(255,255,255,.2);border-color:#fff;box-shadow:0 0 25px rgba(255,255,255,.2);transform:scale(1.03)}.upload-icon{font-size:3rem;opacity:.9;margin-bottom:1rem;transition:transform .3s}.upload-area:hover .upload-icon{transform:scale(1.15)}.upload-text{font-size:1.1rem;margin-bottom:.8rem}.btn{background:#764ba2;color:#fff;border:none;padding:.8rem 1.5rem;border-radius:8px;transition:background .3s,transform .2s}.btn:hover{background:#5c3b86;transform:translateY(-2px)}.btn-secondary{background:#667eea}.formats-info{font-size:.9rem;margin-top:1.5rem;color:#eee}.ad-block{background:rgba(255,255,255,.15);border:1px solid rgba(255,255,255,.25);border-radius:10px;box-shadow:0 4px 10px rgba(0,0,0,.15);padding:.8rem;color:#fff;font-size:.85rem;backdrop-filter:blur(6px)}.ad-block.horizontal{width:90%;max-width:680px;margin:0 auto;height:70px;display:flex;align-items:center;justify-content:center;z-index:5}.ad-block.horizontal:first-of-type{margin-top:100px;margin-bottom:25px}.ad-block.horizontal:last-of-type{margin-top:20px;margin-bottom:20px}.ad-block.vertical{width:130px;height:420px;flex-shrink:0;display:flex;align-items:center;justify-content:center;font-size:.8rem;background:rgba(255,255,255,.1)}.ad-row{display:flex;justify-content:center;align-items:center;gap:25px;margin:0 auto;width:100%;max-width:1200px;height:calc(100vh - 250px)}.control-group,.preview-box{margin-bottom:1rem}.ad-row #upload-section{flex:1;max-width:480px;order:2}.ad-row .ad-block.vertical:first-child{order:1}.ad-row .ad-block.vertical:last-child{order:3}@media (max-width:1100px){.ad-block.vertical{width:100px;height:350px}.ad-row{gap:15px}}.modal-overlay{width:100%;height:100%;background:rgba(0,0,0,.6);display:none;justify-content:center;align-items:center;z-index:2000;animation:.3s forwards fadeIn}.modal-content{background:#fff;border-radius:20px;color:#333;padding:1.8rem 2rem;width:90%;max-width:850px;box-shadow:0 10px 30px rgba(0,0,0,.25);position:relative;transform:scale(.9);opacity:0;animation:.4s forwards popIn;overflow:hidden;max-height:90vh;overflow-y:auto}.close-btn{position:absolute;top:10px;right:15px;font-size:1.8rem;color:#555;background:rgba(255,255,255,.9);border-radius:50%;width:36px;height:36px;display:flex;align-items:center;justify-content:center;box-shadow:0 2px 8px rgba(0,0,0,.15);transition:.25s}.close-btn:hover{background:#f33;color:#fff;transform:scale(1.1)}.modal-body{display:flex;justify-content:space-between;align-items:flex-start;flex-wrap:wrap;gap:1.5rem}.controls-section{flex:1;min-width:300px}.control-group label{display:block;margin-bottom:.4rem;font-weight:600;color:#333}.control-group input,.control-group select{width:100%;padding:.8rem;border:1px solid #ccc;border-radius:8px;outline:0}.control-row{display:flex;justify-content:space-between;align-items:center;gap:.5rem}.preview-section{flex:1;min-width:300px}.preview-box{background:#f8f9fa;border-radius:12px;padding:1rem;box-shadow:0 2px 6px rgba(0,0,0,.1)}.preview-img{width:100%;max-width:300px;height:auto;max-height:230px;object-fit:contain;border-radius:8px;border:1px solid #ddd}.image-info{font-size:.85rem;margin-top:.5rem;color:#444}footer{width:100%;padding:1rem;backdrop-filter:blur(8px);color:#fff;font-size:.9rem}.footer-links{list-style:none;margin-top:.5rem;display:flex;justify-content:center;gap:1rem}.footer-links a{color:#fff;text-decoration:none}@keyframes fadeUp{from{opacity:0;transform:translateY(30px)}to{opacity:1;transform:translateY(0)}}@keyframes fadeIn{from{opacity:0}to{opacity:1}}@keyframes popIn{from{opacity:0;transform:scale(.8)}to{opacity:1;transform:scale(1)}}@media (max-width:900px){.ad-row{flex-direction:column;align-items:center;height:auto;gap:20px;margin-top:90px}.ad-block.horizontal{width:95%;height:60px;max-width:320px;margin:15px auto}.ad-block.vertical{width:300px;height:250px}.modal-body{flex-direction:column;align-items:center}.controls-section,.preview-section{max-width:100%}.upload-section{padding:2rem}}
+/* =============================
+   ImageResizer Pro - Fresh CSS
+   ============================= */
+
+/* === Global Reset === */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  min-height: 100vh;
+  max-height: fit-content;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 50%, #ff6ec4 100%);
+  color: #fff;
+  background-attachment: fixed;
+  background-size: cover;
+  overflow-x: hidden;
+}
+
+/* === Navbar === */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background: rgba(0, 0, 0, 0.25);
+  backdrop-filter: blur(12px);
+  z-index: 1000;
+}
+
+.logo {
+  font-weight: 700;
+  font-size: 1.3rem;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+}
+
+.nav-links a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+.nav-links a:hover {
+  color: #ffd6ff;
+}
+
+/* === Logo Styling === */
+
+
+
+
+/* === Main Centered Upload Area === */
+.main-centered {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  min-height: calc(100vh - 80px);
+  padding-top: 20px;
+}
+
+.upload-section {
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(12px);
+  border-radius: 20px;
+  padding: 3rem 2.5rem;
+  text-align: center;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+  animation: fadeUp 0.6s ease forwards;
+  width: 90%;
+  max-width: 480px;
+}
+
+.upload-area {
+  border: 2px dashed rgba(255, 255, 255, 0.6);
+  border-radius: 16px;
+  padding: 3rem 2rem;
+  background: rgba(255, 255, 255, 0.1);
+  color: white;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.upload-area:hover,
+.upload-area.active {
+  background: rgba(255, 255, 255, 0.2);
+  border-color: #fff;
+  box-shadow: 0 0 25px rgba(255, 255, 255, 0.2);
+  transform: scale(1.03);
+}
+
+.upload-icon {
+  font-size: 3rem;
+  opacity: 0.9;
+  margin-bottom: 1rem;
+  transition: transform 0.3s;
+}
+
+.upload-area:hover .upload-icon {
+  transform: scale(1.15);
+}
+
+.upload-text {
+  font-size: 1.1rem;
+  margin-bottom: 0.8rem;
+}
+
+.btn {
+  background: #764ba2;
+  color: white;
+  border: none;
+  padding: 0.8rem 1.5rem;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s;
+}
+
+.btn:hover {
+  background: #5c3b86;
+  transform: translateY(-2px);
+}
+
+.btn-secondary {
+  background: #667eea;
+}
+
+.formats-info {
+  font-size: 0.9rem;
+  margin-top: 1.5rem;
+  color: #eee;
+
+
+}
+
+/* ==== AD blocks =====*/
+/* === Refined Ad Block Styling === */
+/* === Refined One-Screen Ad Layout === */
+/* === Final One-Screen Ad Layout (Navbar-Safe) === */
+.ad-block {
+  background: rgba(255, 255, 255, 0.15);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  padding: 0.8rem;
+  text-align: center;
+  color: #fff;
+  font-size: 0.85rem;
+  backdrop-filter: blur(6px);
+}
+
+/* --- Horizontal Ads --- */
+.ad-block.horizontal {
+  width: 90%;
+  max-width: 680px;
+  margin: 0 auto;
+  height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 5;
+}
+
+/* Move top ad below navbar */
+.ad-block.horizontal:first-of-type {
+  margin-top: 100px; /* creates space for fixed navbar */
+  margin-bottom: 25px;
+}
+
+/* Bottom ad slightly separated */
+.ad-block.horizontal:last-of-type {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+/* --- Vertical Ads --- */
+.ad-block.vertical {
+  width: 130px;
+  height: 420px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.8rem;
+  background: rgba(255, 255, 255, 0.1);
+}
+
+/* --- Ad Row Layout --- */
+.ad-row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 25px;
+  margin: 0 auto;
+  width: 100%;
+  max-width: 1200px;
+  height: calc(100vh - 250px); /* ensures everything fits below navbar + ads */
+  box-sizing: border-box;
+}
+
+.ad-row #upload-section {
+  flex: 1;
+  max-width: 480px;
+}
+
+/* --- Sidebar Ordering --- */
+.ad-row .ad-block.vertical:first-child {
+  order: 1;
+}
+.ad-row .ad-block.vertical:last-child {
+  order: 3;
+}
+.ad-row #upload-section {
+  order: 2;
+}
+
+/* --- Responsive Layout --- */
+@media (max-width: 1100px) {
+  .ad-block.vertical {
+    width: 100px;
+    height: 350px;
+  }
+  .ad-row {
+    gap: 15px;
+  }
+}
+
+@media (max-width: 900px) {
+  .ad-row {
+    flex-direction: column;
+    align-items: center;
+    height: auto;
+    gap: 20px;
+    margin-top: 90px; /* space below navbar for mobile */
+  }
+
+  .ad-block.horizontal {
+    width: 95%;
+    height: 60px;
+    max-width: 320px;
+    margin: 15px auto;
+  }
+
+  .ad-block.vertical {
+    width: 300px;
+    height: 250px;
+  }
+}
+/* Adjust stacked top ads */
+/* .ad-block.horizontal:first-of-type {
+  margin-top: 90px; 
+} */
+
+/* .ad-block.horizontal + .ad-block.horizontal {
+  margin-top: 10px;
+} */
+
+
+
+
+
+/* === Modal === */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 2000;
+  animation: fadeIn 0.3s ease forwards;
+}
+
+.modal-content {
+  background: #fff;
+  border-radius: 20px;
+  color: #333;
+  padding: 1.8rem 2rem;
+  width: 90%;
+  max-width: 850px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+  position: relative;
+  transform: scale(0.9);
+  opacity: 0;
+  animation: popIn 0.4s ease forwards;
+  overflow: hidden;
+  max-height: 90vh;
+  overflow-y: auto;
+}
+
+.close-btn {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  font-size: 1.8rem;
+  color: #555;
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 50%;
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  transition: all 0.25s ease;
+}
+
+.close-btn:hover {
+  background: #f33;
+  color: #fff;
+  transform: scale(1.1);
+}
+
+.modal-body {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+}
+
+/* === Controls Section === */
+.controls-section {
+  flex: 1;
+  min-width: 300px;
+}
+
+.control-group {
+  margin-bottom: 1rem;
+}
+
+.control-group label {
+  display: block;
+  margin-bottom: 0.4rem;
+  font-weight: 600;
+  color: #333;
+}
+
+.control-group input,
+.control-group select {
+  width: 100%;
+  padding: 0.8rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  outline: none;
+}
+
+.control-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+/* === Preview Section === */
+.preview-section {
+  flex: 1;
+  min-width: 300px;
+  text-align: center;
+}
+
+.preview-box {
+  background: #f8f9fa;
+  border-radius: 12px;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.preview-img {
+  width: 100%;
+  max-width: 300px;
+  height: auto;
+  max-height: 230px;
+  object-fit: contain;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+}
+
+.image-info {
+  font-size: 0.85rem;
+  margin-top: 0.5rem;
+  color: #444;
+}
+
+/* === Footer === */
+footer {
+  width: 100%;
+  background: rgba(0, 0, 0, 0.25);
+  text-align: center;
+  padding: 1rem;
+  backdrop-filter: blur(8px);
+  color: #fff;
+  font-size: 0.9rem;
+}
+
+.footer-links {
+  list-style: none;
+  margin-top: 0.5rem;
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.footer-links a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.footer-links a:hover {
+  color: #ffd6ff;
+}
+
+/* === Animations === */
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes popIn {
+  from { opacity: 0; transform: scale(0.8); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+/* === Responsive === */
+@media (max-width: 900px) {
+  .modal-body {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .preview-section,
+  .controls-section {
+    max-width: 100%;
+  }
+
+  .upload-section {
+    padding: 2rem;
+  }
+}
