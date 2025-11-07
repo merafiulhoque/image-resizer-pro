@@ -2,8 +2,7 @@ document.addEventListener("DOMContentLoaded", () => {
   // === DOM ELEMENTS ===
 
   // ensure modal stays hidden on load
-  const modal = document.getElementById('editorModal');
-  modal.style.display = 'none';
+  
 
   const imageInput = document.getElementById('imageInput');
   const browseBtn = document.getElementById('browseBtn');
