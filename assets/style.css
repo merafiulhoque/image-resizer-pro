@@ -26,6 +26,7 @@ body {
   transform: translateZ(0);
 }
 
+
 /* === Navbar === */
 .navbar {
   position: fixed;
@@ -186,9 +187,17 @@ body {
   margin-bottom: 25px;
 }
 
-body {
-  min-height: 100vh;
+.ad-block {
+  opacity: 0;
+  transition: opacity 0.4s ease;
 }
+
+body.loaded .ad-block {
+  opacity: 1;
+}
+
+
+
 
 .main-centered {
   min-height: calc(100vh - 200px); /* ensures enough space for ads/navbar */
